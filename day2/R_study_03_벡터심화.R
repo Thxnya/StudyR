@@ -65,3 +65,33 @@ sum(d[d > 5])
 d == 5
 condi <- d > 5 & d < 8
 d[condi]
+
+## LAB R카페 매출 분석 1
+espresso <- c(4,5,3,6,5,4,7)
+americano <- c(63,68,64,68,72,89,94)
+latte <- c(61,70,59,71,71,92,88)
+
+price <- c(2000,2500,3000)
+names(price) <- c('espresso','americano','latte')
+price
+
+sale.espresso <- price['espresso'] * espresso
+names(sale.espresso) <- c('Mon','Tue','Wed', 'Thu', 'Fry', 'Sat', 'Sun')
+sale.espresso
+sale.americano <- price['americano'] * americano
+names(sale.americano) <- c('Mon','Tue','Wed', 'Thu', 'Fry', 'Sat', 'Sun')
+sale.americano
+sale.latte <- price['latte'] * latte
+names(sale.latte) <- c('Mon','Tue','Wed', 'Thu', 'Fry', 'Sat', 'Sun')
+sale.latte
+daily.sale <- sale.espresso + sale.americano + sale.latte
+names(daily.sale) <- c('Mon','Tue','Wed', 'Thu', 'Fry', 'Sat', 'Sun')
+daily.sale
+
+cat('총매출액', sum(daily.sale), '\b원')
+sale.sum <- sum(daily.sale)
+sale.mean = mean(daily.sale)
+sale.mean
+cat('평균매출액', sale.mean, '\b원')
+result <- names(daily.sale[daily.sale >= sale.mean])
+cat('평균매출액보다 매출액이 높은 요일은', result)
