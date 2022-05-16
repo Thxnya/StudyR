@@ -122,3 +122,4 @@ result
 ## 내장함수 apply()
 apply(iris[, 1:4], 1, mean) # 행방향
 apply(iris[, 1:4], 2, mean) # 열방향
+
