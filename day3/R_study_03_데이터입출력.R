@@ -85,6 +85,7 @@ levels(diamonds$color)
 levels(diamonds$clarity)
 diamonds.new <- subset(diamonds, cut=='Premium' & carat>=2)
 str(diamonds.new)
+diamonds.new
 
 write.csv(diamonds.new, './day3/shiny_diamonds.csv', row.names = F)
 
