@@ -96,3 +96,14 @@ tmp
 agg <- aggregate(tmp[,'vote'], by=list(성별=tmp$sex), length)
 yes.ratio <- agg$x / no.people
 yes.ratio
+
+229 / 703
+287 / 755
+
+
+no.region <- table(ch60$region)
+tmp <- subset(ch60, vote=='Y')
+agg <- aggregate(tmp[,'vote'], by=list(지역=tmp$region), length)
+agg
+yes.ratio <- agg$x / no.region
+yes.ratio
