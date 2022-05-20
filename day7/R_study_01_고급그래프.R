@@ -162,6 +162,7 @@ df <- aggregate(airquality[,'Temp'],
                 by=list(month=airquality$Month),
                 FUN = mean
                 )
+df
 colnames(df) <- c('month', 'temp')
 
 # 막대그래프
